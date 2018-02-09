@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Planet.gd" type="Script" id=1]
 [ext_resource path="res://Gate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://art/planet/large.png" type="Texture" id=3]
 [ext_resource path="res://art/planet/medium.png" type="Texture" id=4]
 [ext_resource path="res://art/planet/small.png" type="Texture" id=5]
+
+[sub_resource type="Gradient" id=3]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -37,28 +42,32 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision_layer = 0
-collision_mask = 0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
 PLANET_TYPE = "medium"
+ID = 0
 GATE_LIMIT = 3
 PRODUCES = 0
 CONSUMES = 0
 
-[node name="Gate1" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Gate0" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Gate2" parent="." index="1" instance=ExtResource( 2 )]
+width = 5.0
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 3 )
+_sections_unfolded = [ "Fill", "Z Index" ]
 
-[node name="Gate3" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Gate1" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="Gate4" parent="." index="3" instance=ExtResource( 2 )]
+[node name="Gate2" parent="." index="2" instance=ExtResource( 2 )]
 
-[node name="Gate5" parent="." index="4" instance=ExtResource( 2 )]
+[node name="Gate3" parent="." index="3" instance=ExtResource( 2 )]
 
-[node name="Gate6" parent="." index="5" instance=ExtResource( 2 )]
+[node name="Gate4" parent="." index="4" instance=ExtResource( 2 )]
+
+[node name="Gate5" parent="." index="5" instance=ExtResource( 2 )]
 
 [node name="Type" type="AnimatedSprite" parent="." index="6"]
 

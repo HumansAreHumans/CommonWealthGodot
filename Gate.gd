@@ -5,7 +5,7 @@ extends Line2D
 # var b = "textvar"
 
 func _ready():
-	add_point(position)
+	add_point(Vector2(0, 0))
 
 
 #func _process(delta):

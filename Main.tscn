@@ -45,10 +45,10 @@ motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="space" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+[node name="Space" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 modulate = Color( 0.292969, 0.291824, 0.291824, 1 )
-position = Vector2( 318.519, 239.243 )
+position = Vector2( 317.159, 240.603 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 region_enabled = true
