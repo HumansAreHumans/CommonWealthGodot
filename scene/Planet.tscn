@@ -1,15 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Planet.gd" type="Script" id=1]
-[ext_resource path="res://Gate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://script/Planet.gd" type="Script" id=1]
+[ext_resource path="res://scene/Gate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://art/planet/large.png" type="Texture" id=3]
 [ext_resource path="res://art/planet/medium.png" type="Texture" id=4]
 [ext_resource path="res://art/planet/small.png" type="Texture" id=5]
-
-[sub_resource type="Gradient" id=3]
-
-offsets = PoolRealArray( 0, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
+[ext_resource path="res://scene/PlanetHUD.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -35,7 +31,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 25.3542
 
-[node name="Planet" type="Area2D"]
+[node name="Planet" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -46,18 +42,17 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
 PLANET_TYPE = "medium"
 ID = 0
 GATE_LIMIT = 3
-PRODUCES = 0
-CONSUMES = 0
+PLANET_NAME = ""
+PRODUCES = "r1"
+CONSUMES = "r1"
 
 [node name="Gate0" parent="." index="0" instance=ExtResource( 2 )]
-
-width = 5.0
-default_color = Color( 1, 1, 1, 1 )
-gradient = SubResource( 3 )
-_sections_unfolded = [ "Fill", "Z Index" ]
 
 [node name="Gate1" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -85,5 +80,27 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="8"]
 
 shape = SubResource( 2 )
+
+[node name="ProduceConsume" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="GateTransfer" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="PlanetHUD" parent="." index="11" instance=ExtResource( 6 )]
+
+position = Vector2( 40, 35 )
+
+[connection signal="timeout" from="ProduceConsume" to="." method="_on_ProduceConsume_timeout"]
+
+[connection signal="timeout" from="GateTransfer" to="." method="_on_GateTransfer_timeout"]
 
 

@@ -16,7 +16,7 @@ func _ready():
 		planets.push_back(spawn_planet())
 
 func spawn_planet():
-	var scene = load("res://Planet.tscn")
+	var scene = load("res://scene/Planet.tscn")
 	var planet_instance = scene.instance()
 	planet_instance.ID = i
 	planet_instance.set_name("Planet" + str(i))

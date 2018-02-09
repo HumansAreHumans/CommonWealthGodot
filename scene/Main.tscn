@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://script/Main.gd" type="Script" id=1]
 [ext_resource path="res://art/space.png" type="Texture" id=2]
 [ext_resource path="res://art/logo/logo1.png" type="Texture" id=3]
 [ext_resource path="res://art/logo/logo2.png" type="Texture" id=4]
@@ -18,7 +18,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 NUM_PLANETS = 30
@@ -114,6 +114,7 @@ position = Vector2( 19.9445, 0 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
