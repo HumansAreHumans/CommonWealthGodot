@@ -21,16 +21,14 @@ func spawn_planet():
 	planet_instance.ID = i
 	planet_instance.set_name("Planet" + str(i))
 	planet_instance.position = Vector2(randf() * PLANET_SPREAD - PLANET_SPREAD/2, randf() * PLANET_SPREAD - PLANET_SPREAD/2)
-	planet_instance.connect("clicked", self, "_planet_clicked", [i])
+	planet_instance.connect("portal_link", self, "_portal_wanted_link")
 	add_child(planet_instance)	
 	i += 1
 	return planet_instance
 
-func _planet_clicked(idx):
-	if last_clicked >= 0:
-		planets[last_clicked].add_gate(planets[idx])
-	last_clicked = idx
-	
+func _portal_wanted_link():
+	print("did want")
+
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		match event.button_index:

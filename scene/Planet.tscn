@@ -31,7 +31,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 25.3542
 
-[node name="Planet" type="Area2D" index="0"]
+[node name="Planet" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -102,5 +102,7 @@ position = Vector2( 40, 35 )
 [connection signal="timeout" from="ProduceConsume" to="." method="_on_ProduceConsume_timeout"]
 
 [connection signal="timeout" from="GateTransfer" to="." method="_on_GateTransfer_timeout"]
+
+[connection signal="portal_link" from="PlanetHUD" to="." method="_on_PlanetHUD_portal_link"]
 
 

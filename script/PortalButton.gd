@@ -4,7 +4,6 @@ signal wanted_link
 
 var active = false
 
-
 func _on_Area2D_mouse_entered():
 	play("active")
 

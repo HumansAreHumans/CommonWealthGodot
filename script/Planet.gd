@@ -7,6 +7,7 @@ signal added_gate
 signal clicked
 signal produced
 signal consumed
+signal portal_link
 
 const PLANET_TYPES = ["small", "medium", "large"]
 
@@ -78,12 +79,17 @@ func _ready():
 	PLANET_NAME = NameGen.GenerateName()
 	set_process_input(true)
 	PLANET_TYPE = PLANET_TYPES[randi() % 3]
+	CONSUMES = "r%d" % (randi() % 3 + 1)
+	PRODUCES = "r%d" % (randi() % 3 + 1)
+	while PRODUCES == CONSUMES:
+		PRODUCES = "r%d" % (randi() % 3 + 1)
+
 	$Type.animation = PLANET_TYPE
 	emit_signal("loaded")
 
 func _process(delta):
 	for i in range(GATES.size()):
-		get_node("Gate" + str(i)).set_point_position(1, GATES[i].position - position)
+		get_node("Gate%d" % i).set_point_position(1, GATES[i].position - position)
 
 func _on_ProduceConsume_timeout():
 	units[PRODUCES] += 1
@@ -98,3 +104,6 @@ func _on_GateTransfer_timeout():
 		if item && units[item] > 0:
 			units[item] -= 1
 			GATES[i].take(item, 1)
+
+func _on_PlanetHUD_portal_link():
+	emit_signal("portal_link")
