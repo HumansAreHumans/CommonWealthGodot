@@ -3,8 +3,8 @@
 [ext_resource path="res://script/Planet.gd" type="Script" id=1]
 [ext_resource path="res://scene/Gate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://art/planet/large.png" type="Texture" id=3]
-[ext_resource path="res://art/planet/medium.png" type="Texture" id=4]
-[ext_resource path="res://art/planet/small.png" type="Texture" id=5]
+[ext_resource path="res://art/planet/small.png" type="Texture" id=4]
+[ext_resource path="res://art/planet/medium.png" type="Texture" id=5]
 [ext_resource path="res://scene/PlanetHUD.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -17,12 +17,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "medium",
+"name": "small",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "small",
+"name": "medium",
 "speed": 5.0
 } ]
 
