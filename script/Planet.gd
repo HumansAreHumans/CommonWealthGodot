@@ -13,6 +13,8 @@ const PLANET_TYPES = ["small", "medium", "large"]
 var GATES = []
 export (String, "small", "medium", "large") var PLANET_TYPE = "medium"
 export (int) var ID = 0
+export (int) var GATE_LIMIT_MAX = 4
+export (int) var GATE_LIMIT_MIN = 1
 export (int) var GATE_LIMIT = 3
 export (String) var PLANET_NAME = ""
 export var PRODUCES = "r1"
@@ -52,7 +54,8 @@ func add_gate(node, propogate = true):
 	
 	GATES.push_back(node)
 	get_node("Gate" + str(active)).add_point(node.position - position)
-	emit_signal("added_gate", node)
+	emit_signal("added_gate", node, GATES.size() - 1)
+	print("added gate from " + PLANET_NAME + " to " + node.PLANET_NAME)
 	
 	if propogate:
 		node.add_gate(self, false)
@@ -74,12 +77,18 @@ func _unhandled_input(event):
 		and !event.is_pressed():
 		clicked = false
 		
+# TODO figure out how to make library functions
+func randi_range(minval, maxval):
+	var delta = maxval - minval
+	return (randi() % (delta + 1)) + minval
+
 func _ready():
 	PLANET_NAME = NameGen.GenerateName()
 	set_process_input(true)
 	PLANET_TYPE = PLANET_TYPES[randi() % 3]
 	$Type.animation = PLANET_TYPE
-	emit_signal("loaded")
+	GATE_LIMIT = randi_range(GATE_LIMIT_MIN, GATE_LIMIT_MAX)
+	emit_signal("loaded", GATE_LIMIT)
 
 func _process(delta):
 	for i in range(GATES.size()):

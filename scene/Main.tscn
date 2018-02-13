@@ -48,7 +48,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Space" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 modulate = Color( 0.292969, 0.291824, 0.291824, 1 )
-position = Vector2( 317.159, 240.603 )
+position = Vector2( 294.159, 250.603 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -114,7 +114,7 @@ position = Vector2( 19.9445, 0 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform" ]
 

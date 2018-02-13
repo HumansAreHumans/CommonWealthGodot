@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://script/PlanetHUD.gd" type="Script" id=1]
 [ext_resource path="res://art/planet_hud/planet_hud17.png" type="Texture" id=2]
@@ -7,42 +7,14 @@
 [ext_resource path="res://art/planet_hud/planet_hud10.png" type="Texture" id=5]
 [ext_resource path="res://art/planet_hud/planet_hud9.png" type="Texture" id=6]
 [ext_resource path="res://font/Comfortaa-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://art/planet_hud/planet_hud16.png" type="Texture" id=8]
-[ext_resource path="res://art/planet_hud/planet_hud14.png" type="Texture" id=9]
-[ext_resource path="res://art/planet_hud/planet_hud15.png" type="Texture" id=10]
-[ext_resource path="res://PortalButton.gd" type="Script" id=11]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 size = 10
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
-
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "active",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "unused",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "used",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 4.69122, 4.69122 )
 
 [node name="PlanetHUD" type="Node2D"]
 
@@ -64,7 +36,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -53.758, -16.8652 )
 animation = "bar"
-frame = 1
+frame = 0
 
 [node name="r2" type="Sprite" parent="." index="2"]
 
@@ -76,7 +48,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -54.7012, -7.76308 )
 animation = "coal"
-frame = 0
+frame = 2
 
 [node name="r3" type="Sprite" parent="." index="3"]
 
@@ -88,7 +60,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -54.1742, 1.19659 )
 animation = "gem"
-frame = 2
+frame = 1
 
 [node name="Name" type="Label" parent="." index="4"]
 
@@ -105,7 +77,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Planet Name"
@@ -113,33 +85,5 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
-
-[node name="Portal" type="AnimatedSprite" parent="." index="5"]
-
-frames = SubResource( 1 )
-animation = "unused"
-script = ExtResource( 11 )
-
-[node name="Area2D" type="Area2D" parent="Portal" index="0"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal/Area2D" index="0"]
-
-position = Vector2( -33.9709, 4.20592 )
-shape = SubResource( 2 )
-
-[connection signal="input_event" from="Portal/Area2D" to="Portal" method="_on_Area2D_input_event"]
-
-[connection signal="mouse_entered" from="Portal/Area2D" to="Portal" method="_on_Area2D_mouse_entered"]
-
-[connection signal="mouse_exited" from="Portal/Area2D" to="Portal" method="_on_Area2D_mouse_exited"]
 
 

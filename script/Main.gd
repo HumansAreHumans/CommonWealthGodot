@@ -29,7 +29,9 @@ func spawn_planet():
 func _planet_clicked(idx):
 	if last_clicked >= 0:
 		planets[last_clicked].add_gate(planets[idx])
-	last_clicked = idx
+		last_clicked = -1
+	else:
+		last_clicked = idx
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -48,4 +50,9 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		if Input.is_mouse_button_pressed(BUTTON_MASK_RIGHT):
 			$Camera.translate(event.relative * -1 * zoom)
-
+	
+	if event is InputEventKey:
+		match event.scancode:
+			KEY_ESCAPE:
+				get_tree().quit()
+				print("quitting...");

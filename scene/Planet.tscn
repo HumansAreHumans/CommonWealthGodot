@@ -47,6 +47,8 @@ __meta__ = {
 }
 PLANET_TYPE = "medium"
 ID = 0
+GATE_LIMIT_MAX = 4
+GATE_LIMIT_MIN = 1
 GATE_LIMIT = 3
 PLANET_NAME = ""
 PRODUCES = "r1"
