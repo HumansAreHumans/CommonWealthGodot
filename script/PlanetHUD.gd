@@ -25,7 +25,20 @@ func _loaded_Planet(numGates):
 		portalButtonInst.position = Vector2(x * 10, 0)
 		add_child(portalButtonInst)
 		GateButtons.push_back(portalButtonInst)
+		portalButtonInst.connect("select_gate", self, "_selected_gate")
 
 	
 func _on_Portal_wanted_link():
 	emit_signal("portal_link")
+
+func _selected_gate(destination):
+	if destination == null:
+		$GatewayInfoHUD.hide()
+		return
+	
+	#var gate = get_parent().GetGateTo(destination)
+	#if gate == null:
+	#	return
+	
+	#$GatewayInfoHUD.SetGatewayInf(gate)
+	$GatewayInfoHUD.show()

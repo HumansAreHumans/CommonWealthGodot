@@ -1,0 +1,244 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://art/planet_hud/planet_hud18.png" type="Texture" id=1]
+[ext_resource path="res://script/ChangeResourceHUD.gd" type="Script" id=2]
+[ext_resource path="res://art/resources/resource3.png" type="Texture" id=3]
+[ext_resource path="res://art/resources/resource4.png" type="Texture" id=4]
+[ext_resource path="res://art/resources/resource5.png" type="Texture" id=5]
+[ext_resource path="res://art/resources/resource18.png" type="Texture" id=6]
+[ext_resource path="res://art/resources/resource19.png" type="Texture" id=7]
+[ext_resource path="res://art/resources/resource20.png" type="Texture" id=8]
+[ext_resource path="res://art/resources/resource21.png" type="Texture" id=9]
+[ext_resource path="res://art/resources/resource22.png" type="Texture" id=10]
+[ext_resource path="res://art/resources/resource23.png" type="Texture" id=11]
+[ext_resource path="res://art/resources/resource24.png" type="Texture" id=12]
+[ext_resource path="res://art/resources/resource25.png" type="Texture" id=13]
+[ext_resource path="res://art/resources/resource8.png" type="Texture" id=14]
+[ext_resource path="res://art/resources/resource9.png" type="Texture" id=15]
+[ext_resource path="res://art/resources/resource10.png" type="Texture" id=16]
+[ext_resource path="res://art/resources/resource28.png" type="Texture" id=17]
+[ext_resource path="res://art/resources/resource29.png" type="Texture" id=18]
+[ext_resource path="res://art/resources/resource30.png" type="Texture" id=19]
+[ext_resource path="res://art/resources/resource31.png" type="Texture" id=20]
+[ext_resource path="res://art/resources/resource13.png" type="Texture" id=21]
+[ext_resource path="res://art/resources/resource14.png" type="Texture" id=22]
+[ext_resource path="res://art/resources/resource15.png" type="Texture" id=23]
+[ext_resource path="res://art/resources/resource34.png" type="Texture" id=24]
+[ext_resource path="res://art/resources/resource35.png" type="Texture" id=25]
+[ext_resource path="res://art/resources/resource36.png" type="Texture" id=26]
+[ext_resource path="res://art/resources/resource37.png" type="Texture" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="ChangeResourceHUD" type="Sprite"]
+
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="r1" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 43.5, -6.5 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="Area2D" type="Area2D" parent="r1" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r1/Area2D" index="0"]
+
+position = Vector2( -0.803431, -0.278442 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[node name="u1" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 54.5, -6.5 )
+frames = SubResource( 3 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="u1" index="0"]
+
+position = Vector2( -14.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="u1/Area2D" index="0"]
+
+position = Vector2( 13.4466, -1.02844 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[node name="r2" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( 43.5, 4.5 )
+frames = SubResource( 4 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="r2" index="0"]
+
+position = Vector2( -14.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r2/Area2D" index="0"]
+
+position = Vector2( 13.4466, -1.02844 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[node name="u2" type="AnimatedSprite" parent="." index="3"]
+
+position = Vector2( 54.5, 4.5 )
+frames = SubResource( 7 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="u2" index="0"]
+
+position = Vector2( -14.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="u2/Area2D" index="0"]
+
+position = Vector2( 13.4466, -1.02844 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[node name="r3" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 43.5, 15.5 )
+frames = SubResource( 5 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="r3" index="0"]
+
+position = Vector2( -14.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r3/Area2D" index="0"]
+
+position = Vector2( 13.4466, -1.02844 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[node name="u3" type="AnimatedSprite" parent="." index="5"]
+
+position = Vector2( 54.5, 15.5 )
+frames = SubResource( 6 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="u3" index="0"]
+
+position = Vector2( -14.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="u3/Area2D" index="0"]
+
+position = Vector2( 13.4466, -1.02844 )
+scale = Vector2( 0.432692, 0.423077 )
+shape = SubResource( 2 )
+
+[connection signal="input_event" from="r1/Area2D" to="." method="_on_Area2D_input_event" binds= [ "r1" ]]
+
+

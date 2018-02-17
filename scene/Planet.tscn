@@ -31,7 +31,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 25.3542
 
-[node name="Planet" type="Area2D" index="0"]
+[node name="Planet" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

@@ -3,40 +3,40 @@
 [ext_resource path="res://art/resources/resource3.png" type="Texture" id=1]
 [ext_resource path="res://art/resources/resource4.png" type="Texture" id=2]
 [ext_resource path="res://art/resources/resource5.png" type="Texture" id=3]
-[ext_resource path="res://art/resources/resource13.png" type="Texture" id=4]
-[ext_resource path="res://art/resources/resource14.png" type="Texture" id=5]
-[ext_resource path="res://art/resources/resource15.png" type="Texture" id=6]
-[ext_resource path="res://art/resources/resource8.png" type="Texture" id=7]
-[ext_resource path="res://art/resources/resource9.png" type="Texture" id=8]
-[ext_resource path="res://art/resources/resource10.png" type="Texture" id=9]
-[ext_resource path="res://art/resources/resource12.png" type="Texture" id=10]
-[ext_resource path="res://art/resources/resource32.png" type="Texture" id=11]
-[ext_resource path="res://art/resources/resource17.png" type="Texture" id=12]
-[ext_resource path="res://art/resources/resource6.png" type="Texture" id=13]
-[ext_resource path="res://art/resources/resource2.png" type="Texture" id=14]
-[ext_resource path="res://art/resources/resource18.png" type="Texture" id=15]
-[ext_resource path="res://art/resources/resource19.png" type="Texture" id=16]
-[ext_resource path="res://art/resources/resource20.png" type="Texture" id=17]
-[ext_resource path="res://art/resources/resource21.png" type="Texture" id=18]
-[ext_resource path="res://art/resources/resource22.png" type="Texture" id=19]
-[ext_resource path="res://art/resources/resource23.png" type="Texture" id=20]
-[ext_resource path="res://art/resources/resource24.png" type="Texture" id=21]
-[ext_resource path="res://art/resources/resource25.png" type="Texture" id=22]
-[ext_resource path="res://art/resources/resource1.png" type="Texture" id=23]
-[ext_resource path="res://art/resources/resource33.png" type="Texture" id=24]
-[ext_resource path="res://art/resources/resource7.png" type="Texture" id=25]
-[ext_resource path="res://art/resources/resource34.png" type="Texture" id=26]
-[ext_resource path="res://art/resources/resource35.png" type="Texture" id=27]
-[ext_resource path="res://art/resources/resource36.png" type="Texture" id=28]
-[ext_resource path="res://art/resources/resource37.png" type="Texture" id=29]
-[ext_resource path="res://art/resources/resource27.png" type="Texture" id=30]
-[ext_resource path="res://art/resources/resource16.png" type="Texture" id=31]
-[ext_resource path="res://art/resources/resource11.png" type="Texture" id=32]
-[ext_resource path="res://art/resources/resource26.png" type="Texture" id=33]
-[ext_resource path="res://art/resources/resource28.png" type="Texture" id=34]
-[ext_resource path="res://art/resources/resource29.png" type="Texture" id=35]
-[ext_resource path="res://art/resources/resource30.png" type="Texture" id=36]
-[ext_resource path="res://art/resources/resource31.png" type="Texture" id=37]
+[ext_resource path="res://art/resources/resource12.png" type="Texture" id=4]
+[ext_resource path="res://art/resources/resource32.png" type="Texture" id=5]
+[ext_resource path="res://art/resources/resource17.png" type="Texture" id=6]
+[ext_resource path="res://art/resource1.png" type="Texture" id=7]
+[ext_resource path="res://art/resources/resource33.png" type="Texture" id=8]
+[ext_resource path="res://art/resources/resource28.png" type="Texture" id=9]
+[ext_resource path="res://art/resources/resource29.png" type="Texture" id=10]
+[ext_resource path="res://art/resources/resource30.png" type="Texture" id=11]
+[ext_resource path="res://art/resources/resource31.png" type="Texture" id=12]
+[ext_resource path="res://art/resources/resource16.png" type="Texture" id=13]
+[ext_resource path="res://art/resources/resource7.png" type="Texture" id=14]
+[ext_resource path="res://art/resources/resource26.png" type="Texture" id=15]
+[ext_resource path="res://art/resources/resource34.png" type="Texture" id=16]
+[ext_resource path="res://art/resources/resource35.png" type="Texture" id=17]
+[ext_resource path="res://art/resources/resource36.png" type="Texture" id=18]
+[ext_resource path="res://art/resources/resource37.png" type="Texture" id=19]
+[ext_resource path="res://art/resources/resource2.png" type="Texture" id=20]
+[ext_resource path="res://art/resources/resource27.png" type="Texture" id=21]
+[ext_resource path="res://art/resources/resource6.png" type="Texture" id=22]
+[ext_resource path="res://art/resources/resource18.png" type="Texture" id=23]
+[ext_resource path="res://art/resources/resource19.png" type="Texture" id=24]
+[ext_resource path="res://art/resources/resource20.png" type="Texture" id=25]
+[ext_resource path="res://art/resources/resource21.png" type="Texture" id=26]
+[ext_resource path="res://art/resources/resource22.png" type="Texture" id=27]
+[ext_resource path="res://art/resources/resource23.png" type="Texture" id=28]
+[ext_resource path="res://art/resources/resource24.png" type="Texture" id=29]
+[ext_resource path="res://art/resources/resource25.png" type="Texture" id=30]
+[ext_resource path="res://art/resources/resource11.png" type="Texture" id=31]
+[ext_resource path="res://art/resources/resource8.png" type="Texture" id=32]
+[ext_resource path="res://art/resources/resource9.png" type="Texture" id=33]
+[ext_resource path="res://art/resources/resource10.png" type="Texture" id=34]
+[ext_resource path="res://art/resources/resource13.png" type="Texture" id=35]
+[ext_resource path="res://art/resources/resource14.png" type="Texture" id=36]
+[ext_resource path="res://art/resources/resource15.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -46,89 +46,89 @@ animations = [ {
 "name": "r3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "r2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "r1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "r2-hover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "u2-inactive",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "u1-hover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "r1-inactive",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "r3-hover",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "u1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "r3-inactive",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "u2-hover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "r1-hover",
+"name": "u3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "u2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 30 ) ],
-"loop": true,
-"name": "u3-hover",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 31 ) ],
+"frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "u1-inactive",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "r2-inactive",
+"name": "r1-hover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 33 ) ],
+"frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "u3-inactive",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
-"name": "u3",
+"name": "u2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "r3-hover",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "u3-hover",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "r1-inactive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "u1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "r2-inactive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "r1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "r2",
 "speed": 5.0
 } ]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://script/PlanetHUD.gd" type="Script" id=1]
 [ext_resource path="res://art/planet_hud/planet_hud17.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://art/planet_hud/planet_hud10.png" type="Texture" id=5]
 [ext_resource path="res://art/planet_hud/planet_hud9.png" type="Texture" id=6]
 [ext_resource path="res://font/Comfortaa-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://scene/GatewayInfoHUD.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -28,7 +29,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="r1" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -40,7 +40,6 @@ frame = 0
 
 [node name="r2" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
@@ -52,7 +51,6 @@ frame = 2
 
 [node name="r3" type="Sprite" parent="." index="3"]
 
-editor/display_folded = true
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
@@ -85,5 +83,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="GatewayInfoHUD" parent="." index="5" instance=ExtResource( 8 )]
+
+visible = false
 
 
