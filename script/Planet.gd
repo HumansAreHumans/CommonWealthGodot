@@ -39,6 +39,19 @@ var units = {
 	"u3": 0
 }
 
+func get_gate_info(destination):
+	if destination == null:
+		return
+		
+	var idx = GATES.find(destination)
+	if idx == -1:
+		return
+		
+	return {
+		"dst": destination,
+		"rsc": gate_transfers[idx] 
+	}
+
 func take(unitType, amount):
 	units[unitType] += amount
 
@@ -116,3 +129,11 @@ func _on_GateTransfer_timeout():
 
 func _on_PlanetHUD_portal_link():
 	emit_signal("portal_link")
+
+func _on_PlanetHUD_resource_selected(resource, current_planet_info):
+	var gateidx = GATES.find(current_planet_info["dst"])
+	if gateidx == -1:
+		return
+	
+	gate_transfers[gateidx] = resource
+	print("now transfering " + resource + " from " + current_planet_info["dst"].PLANET_NAME)

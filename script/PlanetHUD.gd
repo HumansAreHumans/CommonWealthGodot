@@ -1,6 +1,7 @@
 extends Node2D
 
 signal portal_link
+signal resource_selected
 
 # Takes node that the gate was added to, and the number of existing gates
 var GateButtons = []
@@ -36,9 +37,12 @@ func _selected_gate(destination):
 		$GatewayInfoHUD.hide()
 		return
 	
-	#var gate = get_parent().GetGateTo(destination)
-	#if gate == null:
-	#	return
+	var gate_info = get_parent().get_gate_info(destination)
+	if gate_info == null:
+		return
 	
-	#$GatewayInfoHUD.SetGatewayInf(gate)
+	$GatewayInfoHUD.set_gateway_info(gate_info)
 	$GatewayInfoHUD.show()
+
+func _on_resource_selected(resource, current_planet_info):
+	emit_signal("resource_selected", resource, current_planet_info)

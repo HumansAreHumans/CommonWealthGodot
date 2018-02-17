@@ -88,4 +88,6 @@ _sections_unfolded = [ "Theme", "custom_colors", "custom_fonts" ]
 
 visible = false
 
+[connection signal="resource_selected" from="GatewayInfoHUD" to="." method="_on_resource_selected"]
+
 

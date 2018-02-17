@@ -105,4 +105,6 @@ position = Vector2( 40, 35 )
 
 [connection signal="timeout" from="GateTransfer" to="." method="_on_GateTransfer_timeout"]
 
+[connection signal="resource_selected" from="PlanetHUD" to="." method="_on_PlanetHUD_resource_selected"]
+
 
